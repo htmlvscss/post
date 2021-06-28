@@ -6,15 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>HTML VS CSS</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <style>
         .register-photo {
-            background: #f1f7fc;
+            background: linear-gradient(rgb(255, 0, 153), rgb(51, 0, 255));
+            height: 650px;
             padding: 80px 0;
         }
 
         .register-photo .image-holder {
             display: table-cell;
-            background: url("../../assets/img/graphic-design.png") space, #ffffff;
+            background: url("graphic-design.png") space, #ffffff;
             background-size: auto, auto;
             text-align: right;
             width: 484px;
@@ -97,11 +99,6 @@
         .register-photo form .btn-primary {
             background: linear-gradient(-120deg, rgb(255, 0, 168), rgb(5, 0, 255));
         }
-
-        .register-photo {
-            background: linear-gradient(rgb(255, 0, 153), rgb(51, 0, 255));
-            height: 650px;
-        }
     </style>
 </head>
 
@@ -109,20 +106,33 @@
     <section class="register-photo">
         <div class="form-container">
             <form method="post">
-                <h2 class="text-center"><strong>LOGIN</strong></h2>
-                <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"
-                        style="box-shadow: 0px 0px 9px 2px rgb(0,0,0);"></div>
-                <div class="form-group"><input class="form-control" type="password" name="password"
-                        placeholder="Password" style="box-shadow: 0px 0px 9px 6px;"></div>
+                <h2 class="text-center"><strong>REGISTRATION FORM</strong><br>
+                </h2>
+                <div class="form-group">
+                    <input class="form-control mb-3" type="email" name="email" placeholder="Email">
+                    <input class="form-control" type="password" name="password" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <input class="form-control mb-3" type="email" name="Username" placeholder="Username">
+                        <input class="form-control" type="password" name="password" placeholder="Confirm Password"></div>
                 <div class="form-group">
                     <div class="form-check"><label class="form-check-label"><input class="form-check-input"
                                 type="checkbox">I agree to the license terms.</label></div>
                 </div>
-                <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Sign Up</button></div><a
-                    class="already" href="#">You already have an account? Login here.</a>
+                <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Sign Up</button></div>
+                <a class="already" href="#">You already have an account? Login
+                    here.</a>
             </form>
         </div>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        $(document).ready(function () {
+            AOS.init();
+        });
+    </script>
 </body>
 
 </html>
